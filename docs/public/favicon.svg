@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="32" height="32">
+  <style>
+    text {
+      font-family: ui-monospace, 'Courier New', monospace;
+      font-weight: bold;
+      font-size: 11px;
+      fill: #00ff00;
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+  </style>
+
+  <rect width="64" height="64" fill="#0a0a0a"/>
+
+  <text x="32" y="14">      </text>
+  <text x="39" y="20">   o </text>
+  <text x="33" y="32">@ /|\  </text>
+  <text x="40" y="50">  / \ </text>
+  <text x="32" y="50">       </text>
+</svg>
