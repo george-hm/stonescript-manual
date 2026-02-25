@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Stonescript',
   description: 'Stonescript language reference for Stone Story RPG',
+  srcDir: 'docs',
   cleanUrls: true,
   appearance: 'force-dark',
 
@@ -111,7 +112,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/georgehm/stonescript-docs/edit/main/:path',
+      pattern: 'https://github.com/georgehm/stonescript-docs/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
