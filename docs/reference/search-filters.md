@@ -57,7 +57,7 @@ A few examples:
 ```
 
 A comprehensive list of foe names is not mentioned in the [official manual](https://stonestoryrpg.com/manual). If you wish to contribute to this documentation by
-adding to a list of foe names, please [submit a pull request](https://github.com/georgehm/stonescript-docs).
+adding to a list of foe names, please [submit a pull request](https://github.com/georgehm/stonescript-manual).
 
 A current, work in progress list:
 

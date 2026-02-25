@@ -112,12 +112,12 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/georgehm/stonescript-docs/edit/main/docs/:path',
+      pattern: 'https://github.com/georgehm/stonescript-manual/edit/main/docs/:path',
       text: 'Edit this page on GitHub'
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/georgehm/stonescript-docs' },
+      { icon: 'github', link: 'https://github.com/georgehm/stonescript-manual' },
       { icon: 'discord', link: 'https://discord.gg/StoneStoryRPG' },
     ],
 
