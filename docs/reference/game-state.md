@@ -377,7 +377,7 @@ Number of summoned allies currently in the game.
   activate L
 ```
 
-### `summon.GetId(index?)`
+### `summon.GetId([index])`
 Returns the ID of the summon at a given index (default 0). Returns `null` if none.
 
 **Parameters:**
@@ -386,7 +386,7 @@ Returns the ID of the summon at a given index (default 0). Returns `null` if non
 |-----------|------|-------------|
 | `index` *optional* | integer | Zero-based index of the summon (default `0`) |
 
-### `summon.GetName(index?)`
+### `summon.GetName([index])`
 Returns the localized name of the summon at a given index.
 
 **Parameters:**
@@ -395,7 +395,7 @@ Returns the localized name of the summon at a given index.
 |-----------|------|-------------|
 | `index` *optional* | integer | Zero-based index of the summon (default `0`) |
 
-### `summon.GetVar(varName, index?)`
+### `summon.GetVar(varName, [index])`
 Returns a custom variable exposed by the summon type.
 
 **Parameters:**
@@ -410,7 +410,7 @@ Returns a custom variable exposed by the summon type.
   activate cinderwisp
 ```
 
-### `summon.GetState(index?)` / `summon.GetTime(index?)`
+### `summon.GetState([index])` / `summon.GetTime([index])`
 The current state and elapsed frames of the summon.
 
 **Parameters:**
