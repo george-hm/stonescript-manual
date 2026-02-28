@@ -10,9 +10,21 @@ Screen dimensions are available as game state: `screen.w` (width) and `screen.h`
 
 Converts an X value from world-space to screen-space (column).
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | World X coordinate |
+
 ### screen.FromWorldZ(int) → integer
 
 Converts a world-space Z value to a screen-space Y value (row).
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | World Z coordinate |
 
 ```stonescript
 var x = screen.FromWorldX(pos.x)
@@ -24,9 +36,21 @@ var y = screen.FromWorldZ(pos.z - pos.y)
 
 Converts a screen-space X column to world-space X.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | Screen X column |
+
 ### screen.ToWorldZ(int) → integer
 
 Converts a screen-space Y row to world-space Z.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | Screen Z row |
 
 ```stonescript
 var wx = screen.ToWorldX(input.x)

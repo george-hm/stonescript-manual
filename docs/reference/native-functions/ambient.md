@@ -20,6 +20,12 @@ Returns a comma-separated list of all currently active ambient audio IDs.
 
 Adds a layer of ambient audio with the given sound ID.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Ambient sound ID to play |
+
 ```stonescript
 ?loc.begin
   ambient.Add(ambient_crypt)

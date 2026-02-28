@@ -6,6 +6,14 @@ Colors in Stonescript are represented as strings in [hexadecimal notation](https
 
 Converts three integer values (0–255) into a hex color string.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `r` | integer | Red component (0–255) |
+| `g` | integer | Green component (0–255) |
+| `b` | integer | Blue component (0–255) |
+
 ```stonescript
 var c = color.FromRGB(255, 0, 128)
 >`0,0,@c@, @c@
@@ -14,6 +22,12 @@ var c = color.FromRGB(255, 0, 128)
 ## color.ToRGB(string) → int[3]
 
 Converts a hex color string to an array of three integers (r, g, b).
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `string` | string | Hex color string to convert |
 
 ```stonescript
 var c   = color.Random()
@@ -27,6 +41,14 @@ var b   = rgb[2]
 ## color.Lerp(c1, c2, t) → string
 
 Linearly interpolates from color `c1` to color `c2` at time `t` (0.0–1.0).
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `c1` | string | Start color |
+| `c2` | string | End color |
+| `t` | float | Interpolation factor (0.0–1.0) |
 
 ```stonescript
 var c1 = "#ff4400"

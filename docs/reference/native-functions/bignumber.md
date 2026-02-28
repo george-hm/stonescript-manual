@@ -17,6 +17,12 @@ var bn2 = math.BigNumber("123456789123456789")
 
 Adds a number to the BigNumber (`+`). Chainable.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number \| BigNumber | Value to add |
+
 ```stonescript
 var bn = math.BigNumber(12)
 bn.Add(5)
@@ -27,6 +33,12 @@ bn.Add(5)
 ### b.Sub(num | BigNumber) — Returns itself
 
 Subtracts a number from the BigNumber (`-`).
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number \| BigNumber | Value to subtract |
 
 ```stonescript
 var bn = math.BigNumber(12)
@@ -39,6 +51,12 @@ bn.Sub(5)
 
 Multiplies the BigNumber (`*`). Chainable.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number \| BigNumber | Value to multiply by |
+
 ```stonescript
 var bn = math.BigNumber("500")
 bn.Add(500).Mul(1000).Mul(1000).Mul(1000)
@@ -49,6 +67,12 @@ bn.Add(500).Mul(1000).Mul(1000).Mul(1000)
 ### b.Div(num | BigNumber) — Returns itself
 
 Divides the BigNumber (`/`).
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number \| BigNumber | Value to divide by |
 
 ```stonescript
 var bn = math.BigNumber(12)

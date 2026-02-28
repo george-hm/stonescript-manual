@@ -153,6 +153,12 @@ Number of foes within 46 units of the player.
 ### `foe.GetCount(int)`
 Number of foes within a specific number of units.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | Radius in units to search within |
+
 ### `foe.state` / `foe.time`
 A number representing the foe's current state, and elapsed frames within that state.
 
@@ -178,11 +184,28 @@ Number of buffs on the foe and a composite string describing them.
 ### `foe.buffs.GetCount(str)` / `foe.buffs.GetTime(str)`
 Count and duration of a specific buff on the foe.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | ID of the buff to query. See [Buff & Debuff IDs](/reference/search-filters#buff-debuff-ids) for accepted values. |
+
+```stonescript
+?foe.buffs.GetCount("stability") > 0
+  >`0,3,Foe is stable!
+```
+
 ### `foe.debuffs.count` / `foe.debuffs.string`
 Number of debuffs on the foe and a composite string describing them.
 
 ### `foe.debuffs.GetCount(str)` / `foe.debuffs.GetTime(str)`
 Count and duration of a specific debuff on the foe.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | ID of the debuff to query. See [Buff & Debuff IDs](/reference/search-filters#buff-debuff-ids) for accepted values. |
 
 ```stonescript
 >`0,1,Chill debuff count = @foe.debuffs.GetCount("debuff_chill")@
@@ -224,11 +247,28 @@ Number of buffs on the player and a composite description.
 ### `buffs.GetCount(str)` / `buffs.GetTime(str)`
 Count and duration of a specific buff on the player.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | ID of the buff to query. See [Buff & Debuff IDs](/reference/search-filters#buff-debuff-ids) for accepted values. |
+
+```stonescript
+?buffs.GetCount("berserk") > 0
+  >`0,3,Berserk is active!
+```
+
 ### `buffs.oldest`
 The ID of the oldest buff on the player.
 
 ### `debuffs.count` / `debuffs.string` / `debuffs.GetCount(str)` / `debuffs.GetTime(str)`
 Same as buffs, but for negative effects.
+
+**Parameters for `debuffs.GetCount(str)` / `debuffs.GetTime(str)`:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | ID of the debuff to query. See [Buff & Debuff IDs](/reference/search-filters#buff-debuff-ids) for accepted values. |
 
 ### `debuffs.oldest`
 The ID of the oldest debuff on the player.
@@ -337,22 +377,47 @@ Number of summoned allies currently in the game.
   activate L
 ```
 
-### `summon.GetId(index?)` 
+### `summon.GetId([index])`
 Returns the ID of the summon at a given index (default 0). Returns `null` if none.
 
-### `summon.GetName(index?)`
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `index` *optional* | integer | Zero-based index of the summon (default `0`) |
+
+### `summon.GetName([index])`
 Returns the localized name of the summon at a given index.
 
-### `summon.GetVar(varName, index?)`
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `index` *optional* | integer | Zero-based index of the summon (default `0`) |
+
+### `summon.GetVar(varName, [index])`
 Returns a custom variable exposed by the summon type.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `varName` | string | Name of the custom variable to retrieve |
+| `index` *optional* | integer | Zero-based index of the summon (default `0`) |
 
 ```stonescript
 ?summon.GetId() = cinderwisp & summon.GetVar("ignition") > 2
   activate cinderwisp
 ```
 
-### `summon.GetState(index?)` / `summon.GetTime(index?)`
+### `summon.GetState([index])` / `summon.GetTime([index])`
 The current state and elapsed frames of the summon.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `index` *optional* | integer | Zero-based index of the summon (default `0`) |
 
 ---
 

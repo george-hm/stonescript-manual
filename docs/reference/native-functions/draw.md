@@ -12,6 +12,14 @@ Advanced print commands (`` >` ``, `>o`, etc.) always draw **on top** of boxes d
 
 Sets the background color at a specific screen position.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `x` | integer | Horizontal screen position |
+| `y` | integer | Vertical screen position |
+| `color` | string | Fill color |
+
 ```stonescript
 draw.Bg(5, 4, #red)
 ```
@@ -22,6 +30,16 @@ draw.Bg(5, 4, #red)
 
 Sets the background color of a rectangular region.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `x` | integer | Horizontal screen position |
+| `y` | integer | Vertical screen position |
+| `color` | string | Fill color |
+| `w` | integer | Width in cells |
+| `h` | integer | Height in cells |
+
 ```stonescript
 draw.Bg(5, 4, #cyan, 10, 6)
 ```
@@ -31,6 +49,17 @@ draw.Bg(5, 4, #cyan, 10, 6)
 **Returns:** nothing
 
 Draws a rectangular border at the specified position and size. `style` is an integer; negative style values make the center transparent.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `x` | integer | Horizontal screen position |
+| `y` | integer | Vertical screen position |
+| `w` | integer | Width in cells |
+| `h` | integer | Height in cells |
+| `color` | string | Border color |
+| `style` | integer | Box style index |
 
 ```stonescript
 var style = 1
@@ -53,6 +82,13 @@ Clears the entire screen.
 
 Returns the glyph character at screen position `(x, y)`.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `x` | integer | Horizontal grid position |
+| `y` | integer | Vertical grid position |
+
 ```stonescript
 var s
 var x = 20
@@ -72,11 +108,18 @@ drawX = x - 1
 >`@drawX@,@y@,[#]
 ```
 
-## draw.Player() / draw.Player(x, y)
+## draw.Player([x, y])
 
 **Returns:** nothing
 
-Draws the player character (with all equipment and addons) at the current script execution point. Accepts optional x, y offset values.
+Draws the player character (with all equipment and addons) at the current script execution point.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `x` *optional* | integer | Horizontal offset (default `0`) |
+| `y` *optional* | integer | Vertical offset (default `0`) |
 
 For drawing to an absolute screen position, use [`screen.FromWorldX`](./screen) / [`screen.FromWorldZ`](./screen) to derive the correct offsets.
 

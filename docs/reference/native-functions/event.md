@@ -8,13 +8,31 @@ Events typically have up to **3 active objectives** at a time, so valid index va
 
 Returns the string identifier of the objective at the given index.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | Zero-based objective index |
+
 ## event.GetObjectiveProgress(int) → int
 
 Returns the player's current progress toward the objective at the given index.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | Zero-based objective index |
+
 ## event.GetObjectiveGoal(int) → int
 
 Returns the total goal value for the objective at the given index.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | Zero-based objective index |
 
 ## Example
 

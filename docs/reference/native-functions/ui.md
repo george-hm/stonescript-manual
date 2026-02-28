@@ -29,6 +29,12 @@ Adds a Panel to the root Panel.
 
 Adds a Text element to the root Panel.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `string` *optional* | string | Initial text content |
+
 ```stonescript
 ?loc.begin
   var t = ui.AddText()
@@ -54,6 +60,12 @@ func OnPressed()
 
 Adds an animated ASCII sprite to the root Panel. Accepts a sprite sheet string.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `string` | string | Sprite sheet string |
+
 ```stonescript
 ?loc.begin
   ui.AddAnim(ascii
@@ -78,6 +90,12 @@ Adds a Canvas to the root Panel. Canvas is optimised for drawing arbitrary glyph
 ### ui.AddStyle(string) → int
 
 Adds a new style for rectangular components (Panels, Buttons). Returns a style ID. Protected against duplicate additions. Use the returned ID rather than hard-coding style numbers, because multiple scripts may call `ui.AddStyle()`.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `string` | string | Style definition string |
 
 ```stonescript
 var customStyle = ui.AddStyle("
@@ -114,11 +132,18 @@ Opens the inventory screen.
 
 Opens the Mind Stone screen.
 
-### ui.ShowBanner(str) / ui.ShowBanner(str, str)
+### ui.ShowBanner(str, [str])
 
 **Returns:** nothing
 
 Displays the animated location banner with up to two messages. The animation restarts on each call.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Primary banner message |
+| `str` *optional* | string | Secondary banner message |
 
 ```stonescript
 ?time = 120

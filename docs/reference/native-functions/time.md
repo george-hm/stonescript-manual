@@ -6,24 +6,32 @@ Time values in Stonescript are measured in **frames** (the game runs at 30 frame
 
 Unix timestamp and local/UTC clock values are also available as [game state](/reference/game-state) variables (`time.msbn`, `time.year`, `time.month`, `time.day`, `time.hour`, `time.minute`, `time.second`, and the `utc.*` equivalents).
 
-## time.FormatCasual(int) → string
-## time.FormatCasual(int, bool) → string
+## time.FormatCasual(int, [bool]) → string
 
 Converts a frame count to a human-readable casual string such as `"1m 23s"`.
 
-The optional second parameter (`bool`) maximises precision when `true`.
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `frames` | integer | Frame count to format |
+| `precise` *optional* | bool | When `true`, maximises precision (e.g. shows seconds even in long durations) |
 
 ```stonescript
 >`0,0,Current time =
 ^ @time.FormatCasual(totaltime, true)@
 ```
 
-## time.FormatDigital(int) → string
-## time.FormatDigital(int, bool) → string
+## time.FormatDigital(int, [bool]) → string
 
 Converts a frame count to a digital clock string such as `"1:23"`.
 
-The optional second parameter (`bool`) maximises precision when `true`.
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `frames` | integer | Frame count to format |
+| `precise` *optional* | bool | When `true`, maximises precision (e.g. shows seconds even in long durations) |
 
 ```stonescript
 >`0,0,Current time =

@@ -17,6 +17,12 @@ var lang = te.language
 
 Translates an English string into the player's selected language. If no translation is found, the input text is returned unchanged. Alternatively, a text identifier (TID) can be passed directly.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Translation ID or English string to translate |
+
 ```stonescript
 var button = ui.AddButton()
 button.text = te.xt(Play)
@@ -27,6 +33,12 @@ button.text = te.xt(Play)
 
 Returns the internal text identifier (TID) for a given string. The input text should be in the player's current language.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Localized string to look up |
+
 ```stonescript
 var tid = te.GetTID("Play")
 >`0,1,@tid@
@@ -36,6 +48,12 @@ var tid = te.GetTID("Play")
 ## te.ToEnglish(str) → string
 
 Translates a string from the player's current language back to English. Returns the input unchanged if no translation is found.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Localized string to convert to English |
 
 ```stonescript
 >`0,1,@te.ToEnglish("Jogar")@

@@ -26,6 +26,12 @@ Euler's number ≈ 2.71828
 
 Absolute value.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
+
 ```stonescript
 var n = math.Abs(-2)
 // n = 2
@@ -35,6 +41,12 @@ var n = math.Abs(-2)
 
 Round up to the nearest whole number (returns float).
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
+
 ```stonescript
 var n = math.Ceil(4.2)   // 5.0
 ```
@@ -42,6 +54,12 @@ var n = math.Ceil(4.2)   // 5.0
 ### math.CeilToInt(num) → integer
 
 Round up to the nearest integer.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
 
 ```stonescript
 var n = math.CeilToInt(4.2)  // 5
@@ -51,6 +69,12 @@ var n = math.CeilToInt(4.2)  // 5
 
 Round down to the nearest whole number (returns float).
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
+
 ```stonescript
 var n = math.Floor(2.7)   // 2.0
 ```
@@ -58,6 +82,12 @@ var n = math.Floor(2.7)   // 2.0
 ### math.FloorToInt(num) → integer
 
 Round down to the nearest integer.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
 
 ```stonescript
 var n = math.FloorToInt(2.7)  // 2
@@ -67,6 +97,12 @@ var n = math.FloorToInt(2.7)  // 2
 
 Round to nearest whole number (returns float).
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
+
 ```stonescript
 var n = math.Round(2.7)   // 3.0
 ```
@@ -74,6 +110,12 @@ var n = math.Round(2.7)   // 3.0
 ### math.RoundToInt(num) → integer
 
 Round to nearest integer.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
 
 ```stonescript
 var n = math.RoundToInt(2.7)  // 3
@@ -85,6 +127,14 @@ var n = math.RoundToInt(2.7)  // 3
 
 Constrains `num` to the range `[min, max]`.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Value to constrain |
+| `min` | number | Lower bound |
+| `max` | number | Upper bound |
+
 ```stonescript
 var n = math.Clamp(50, 0, 10)  // 10
 ```
@@ -92,6 +142,13 @@ var n = math.Clamp(50, 0, 10)  // 10
 ### math.Max(num1, num2) → number
 
 Returns the larger of two numbers.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num1` | number | First value to compare |
+| `num2` | number | Second value to compare |
 
 ```stonescript
 var n = math.Max(3, 10)  // 10
@@ -101,6 +158,13 @@ var n = math.Max(3, 10)  // 10
 
 Returns the smaller of two numbers.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num1` | number | First value to compare |
+| `num2` | number | Second value to compare |
+
 ```stonescript
 var n = math.Min(3, 10)  // 3
 ```
@@ -108,6 +172,12 @@ var n = math.Min(3, 10)  // 3
 ### math.Sign(num) → number
 
 Returns `-1` for negative numbers, `1` otherwise.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
 
 ```stonescript
 var s = math.Sign(-21)   // -1
@@ -117,6 +187,13 @@ var s = math.Sign(-21)   // -1
 
 Returns `num` raised to the power `p`.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Base value |
+| `p` | number | Exponent |
+
 ```stonescript
 var n = math.Pow(3, 2)   // 9
 ```
@@ -124,6 +201,12 @@ var n = math.Pow(3, 2)   // 9
 ### math.Sqrt(num) → number
 
 Square root.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
 
 ```stonescript
 var n = math.Sqrt(9)   // 3
@@ -133,6 +216,12 @@ var n = math.Sqrt(9)   // 3
 
 Returns e raised to the given power.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Exponent |
+
 ```stonescript
 var n = math.Exp(3)   // 20.08554
 ```
@@ -140,6 +229,13 @@ var n = math.Exp(3)   // 20.08554
 ### math.Log(num, base) → number
 
 Logarithm at the given base.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
+| `base` | number | Logarithm base |
 
 ```stonescript
 var n = math.Log(5, 2)   // 2.321928
@@ -150,6 +246,14 @@ var n = math.Log(5, 2)   // 2.321928
 ### math.Lerp(a, b, t) → number
 
 Linear interpolation from `a` to `b` at time `t` (0.0–1.0).
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `a` | number | Start value |
+| `b` | number | End value |
+| `t` | float | Interpolation factor (0.0–1.0) |
 
 ```stonescript
 var n = math.Lerp(0.0, 20.0, 0.75)  // 15.0
@@ -171,17 +275,35 @@ All trig functions work in **radians**. Use `math.ToDeg` / `math.ToRad` to conve
 
 ### math.Sin(num) → number
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Angle in radians |
+
 ```stonescript
 var n = math.Sin(math.pi / 2)  // 1
 ```
 
 ### math.Cos(num) → number
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Angle in radians |
+
 ```stonescript
 var n = math.Cos(0)  // 1
 ```
 
 ### math.Tan(num) → number
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Angle in radians |
 
 ```stonescript
 var n = math.Tan(2)  // -2.18504
@@ -191,6 +313,12 @@ var n = math.Tan(2)  // -2.18504
 
 Arc-sine. Input must be in `[-1, 1]`; returns `NaN` otherwise.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value (must be in [-1, 1]) |
+
 ```stonescript
 var n = math.Asin(1)  // π/2
 ```
@@ -198,6 +326,12 @@ var n = math.Asin(1)  // π/2
 ### math.Acos(num) → number
 
 Arc-cosine. Input must be in `[-1, 1]`.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value (must be in [-1, 1]) |
 
 ```stonescript
 var n = math.Acos(-1)  // π
@@ -207,6 +341,12 @@ var n = math.Acos(-1)  // π
 
 Arc-tangent.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Input value |
+
 ```stonescript
 var n = math.Atan(2)  // 1.107149
 ```
@@ -214,6 +354,13 @@ var n = math.Atan(2)  // 1.107149
 ### math.Atan2(y, x) → number
 
 Angle in radians from the x-axis to the point `(x, y)`.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `y` | number | Y component |
+| `x` | number | X component |
 
 ```stonescript
 var n = math.Atan2(3, 2)  // 0.9827937
@@ -223,6 +370,12 @@ var n = math.Atan2(3, 2)  // 0.9827937
 
 Converts radians to degrees.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Angle in radians |
+
 ```stonescript
 var n = math.ToDeg(2 * math.pi)  // 360
 ```
@@ -230,6 +383,12 @@ var n = math.ToDeg(2 * math.pi)  // 360
 ### math.ToRad(num) → number
 
 Converts degrees to radians.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | number | Angle in degrees |
 
 ```stonescript
 var n = math.ToRad(360)  // 2π

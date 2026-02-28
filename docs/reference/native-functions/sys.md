@@ -34,6 +34,12 @@ The current base URL used when resolving `import` and `new` paths. Defaults to `
 
 Changes the base URL for subsequent `import` / `new` commands. Can only be called from the Mind Stone itself (not from an imported script).
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | URL of the remote script file |
+
 Special values:
 - `"local"` — use the local save-file folder
 - `"remote"` — use the official Stone Story RPG repository
