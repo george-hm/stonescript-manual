@@ -18,6 +18,12 @@ Returns the ID of the currently playing music track, or an empty string if no mu
 
 Plays the track with the given ID. Replaces any track currently playing.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Music track ID to play |
+
 ```stonescript
 ?loc.begin | loc.loop
   music.Play(temple_0)

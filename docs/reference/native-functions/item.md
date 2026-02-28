@@ -18,6 +18,12 @@ Returns `true` if item abilities can be activated right now. Some game moments (
 
 Returns `true` if a specific item (by ability ID string) can be activated. The item must be equipped. This is a subset of `item.GetCooldown()` — an item may have zero cooldown but still be inactivatable.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Item name to check |
+
 ```stonescript
 equip bardiche
 ?item.GetCooldown("skeleton_arm") <= 0
@@ -30,6 +36,12 @@ equip bardiche
 
 Returns the remaining cooldown in frames for the given ability ID string. Returns `-1` for invalid IDs or abilities not yet used.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Item name to check |
+
 ```stonescript
 ?foe = boss & item.GetCooldown("bardiche") <= 0
   equip bardiche
@@ -39,6 +51,12 @@ Returns the remaining cooldown in frames for the given ability ID string. Return
 ## item.GetCount(str) → integer
 
 Returns the number of copies of an item matching the search criteria in your inventory. Returns `0` if none found. Accepts the same [search filter](/reference/search-filters) syntax as `equip`.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | Item name to count in inventory |
 
 ```stonescript
 var searchCriteria = "sword *0 -big -socket"
@@ -50,9 +68,21 @@ var swordCount = item.GetCount(searchCriteria)
 
 Returns the item stored in the **left** slot of the specified loadout number. Returns an empty string if the slot is empty.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | Loadout slot index (1-based) |
+
 ## item.GetLoadoutR(int) → string
 
 Returns the item stored in the **right** slot of the specified loadout number.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `int` | integer | Loadout slot index (1-based) |
 
 ```stonescript
 >`0,1,Left:  @item.GetLoadoutL(1)@

@@ -16,6 +16,13 @@ storage.Set(key, value)
 
 Saves a value to permanent storage at the specified key.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `key` | string | Storage key |
+| `value` | any | Value to store |
+
 ```stonescript
 var score = 1000
 storage.Set("highscore", score)
@@ -31,6 +38,13 @@ storage.Get(key, default) → value
 ```
 
 Retrieves a value from storage. If the key doesn't exist, returns `null` (or the `default` value if provided).
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `key` | string | Storage key |
+| `default` *optional* | any | Fallback value if key does not exist |
 
 ```stonescript
 var value = storage.Get("highscore")
@@ -57,6 +71,12 @@ storage.Has(key) → boolean
 
 Returns `true` if the specified key exists in storage.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `key` | string | Storage key to check |
+
 ```stonescript
 ?storage.Has("highscore")
   var value = storage.Get("highscore")
@@ -75,6 +95,12 @@ storage.Delete(key)
 
 Deletes any value stored at the specified key.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `key` | string | Storage key to delete |
+
 ```stonescript
 storage.Delete("highscore")
 ```
@@ -89,6 +115,13 @@ storage.Incr(key, amount) → integer
 ```
 
 Increases the value at the specified key by `1` (or by `amount`) and returns the new value. Useful for tracking counters across runs.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `key` | string | Storage key |
+| `amount` *optional* | integer | Amount to increment by (default `1`) |
 
 ```stonescript
 ?gameOver

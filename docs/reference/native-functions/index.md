@@ -28,6 +28,8 @@ While scripts can define their own [functions](/guide/functions), Stonescript sh
 
 ## Calling convention
 
+> **Parameter notation:** Throughout this reference, parameters shown in `[brackets]` are **optional**. Parameters without brackets are required.
+
 Native functions are called exactly like script-defined functions:
 
 ```stonescript

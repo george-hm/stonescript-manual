@@ -6,6 +6,12 @@ The `int` namespace contains utilities for working with integer values.
 
 Converts a string representation of a number into an integer value.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `str` | string | String to parse as integer |
+
 ::: warning
 Throws an error if the given string cannot be parsed as a number.
 :::

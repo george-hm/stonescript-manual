@@ -10,6 +10,12 @@ Most player **state** (position, HP, direction, name, etc.) is available through
 
 If the player has **Big Head** mode enabled, changes their facial expression to scared for a given amount of time.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `num` | integer | Duration in frames |
+
 ```stonescript
 ?key = primaryBegin
   player.ShowScaredFace(1)

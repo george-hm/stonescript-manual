@@ -37,6 +37,14 @@ Binding changes persist between runs but do not save to [storage](./storage). Fo
 
 Assigns up to two keys to an action. If either key is already bound to a different action, it is released from that action.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `act` | string | Action name |
+| `key1` | string | Primary key |
+| `key2` *optional* | string | Secondary key |
+
 ```stonescript
 ?loc.begin
   key.Bind("Potion", "P")
@@ -48,17 +56,41 @@ Assigns up to two keys to an action. If either key is already bound to a differe
 
 Returns the action currently bound to a given key. Returns `"None"` if the key is not bound.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `key` | string | Key name to look up |
+
 ## key.GetActKey(act) → string
 
 Returns the first key bound to a given action. Returns `"None"` if no key is bound.
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `act` | string | Action name to look up primary binding |
 
 ## key.GetActKey2(act) → string
 
 Returns the second key bound to a given action. Returns `"None"` if there is no secondary key.
 
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `act` | string | Action name to look up secondary binding |
+
 ## key.GetActLabel(act) → string
 
 Returns a short user-facing label for the first key bound to an action (currently the first letter of the key name).
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `act` | string | Action name to get display label |
 
 ## key.ResetBinds()
 
