@@ -19,7 +19,7 @@ export default defineConfig({
       { text: 'Reference', link: '/reference/game-state' },
       { text: 'Appendix', link: '/appendix/ability-ids' },
       {
-        text: 'v4.27.1',
+        text: 'v4.27.2',
         items: [
           { text: 'Release Notes', link: 'https://stonestoryrpg.com/releasenotes' },
           { text: 'Beta', link: 'https://stonestoryrpg.com/stonescript/beta.html' },

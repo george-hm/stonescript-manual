@@ -294,6 +294,16 @@ The number of frames it takes the player to move one position forward.
 ### `player.moveX` / `player.moveZ` / `player.moveAddX` / `player.moveAddZ`
 Information about the player's current movement speed and accumulated steps.
 
+`moveX` and `moveZ` represent speed (steps per second) in units of 30 (the game runs at 30fps). `moveAddX` and `moveAddZ` track the accumulated movement bonus that results in a step when the added amount reaches 30.
+
+```stonescript
+>`0,1,MoveX=@player.moveX@
+>`0,2,MoveZ=@player.moveZ@
+>`0,3,MoveAddX=@player.moveAddX@
+>`0,4,MoveAddZ=@player.moveAddZ@
+```
+
+
 ### `player.GetNextLegendName()`
 The next unlocked Legend quest the player hasn't completed yet.
 
