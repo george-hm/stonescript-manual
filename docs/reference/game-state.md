@@ -92,8 +92,6 @@ The current location's best completion time (your personal record).
 >`0,1,Best time = @loc.bestTime@ frames
 ```
 
----
-
 ## Encounter
 
 ### `encounter.isElite`
@@ -109,8 +107,6 @@ The special modifier for the current encounter, if any.
 ```stonescript
 >`0,2,Modifier = @encounter.eliteMod@
 ```
-
----
 
 ## Foe
 
@@ -211,8 +207,6 @@ Count and duration of a specific debuff on the foe.
 >`0,1,Chill debuff count = @foe.debuffs.GetCount("debuff_chill")@
 ```
 
----
-
 ## Player
 
 ### `hp` / `maxhp`
@@ -303,8 +297,6 @@ Information about the player's current movement speed and accumulated steps.
 ### `player.GetNextLegendName()`
 The next unlocked Legend quest the player hasn't completed yet.
 
----
-
 ## Items
 
 ### `item.left` / `item.right`
@@ -332,8 +324,6 @@ The currently brewed potion. Includes `"auto"` if auto-refill is enabled.
   activate potion
 ```
 
----
-
 ## Harvest
 
 ### `harvest`
@@ -346,8 +336,6 @@ The next harvestable object (tree, boulder, etc).
 
 ### `harvest.distance` / `harvest.z`
 Distance and Z position of the nearest harvestable object.
-
----
 
 ## Pickup
 
@@ -363,8 +351,6 @@ The current pickup being targeted.
 
 ### `pickup.distance` / `pickup.z`
 Distance and Z position of the targeted pickup.
-
----
 
 ## Summons
 
@@ -419,8 +405,6 @@ The current state and elapsed frames of the summon.
 |-----------|------|-------------|
 | `index` *optional* | integer | Zero-based index of the summon (default `0`) |
 
----
-
 ## AI
 
 ### `ai.enabled`
@@ -435,8 +419,6 @@ True if the player is idle, waiting for something to complete.
 ### `ai.walking`
 True if the player is currently moving.
 
----
-
 ## Input
 
 ### `input.x` / `input.y`
@@ -445,8 +427,6 @@ The X and Y position of the input device (mouse/touch) on the ASCII grid.
 ```stonescript
 >(@input.x@, @input.y@)
 ```
-
----
 
 ## Resources
 
@@ -458,8 +438,6 @@ The player's current inventory amounts of each resource.
   >Wood = @res.wood@
 >`0,1,#magenta,♦ @res.crystals@
 ```
-
----
 
 ## Screen
 
@@ -476,8 +454,6 @@ Width and height of the ASCII grid.
 var sw = screen.w
 >Screen width = @sw@
 ```
-
----
 
 ## Misc
 

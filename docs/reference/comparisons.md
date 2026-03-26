@@ -14,8 +14,6 @@ Compares values for equality. For strings, checks if one **contains** the other.
   equip vigor staff
 ```
 
----
-
 ## `!` — Not Equal / Not Contains
 
 Compares values for inequality. For strings, checks if one does **not contain** the other.
@@ -24,8 +22,6 @@ Compares values for inequality. For strings, checks if one does **not contain** 
 ?foe ! poison
   equipL sword
 ```
-
----
 
 ## `&` — Logical AND
 
@@ -36,8 +32,6 @@ Both conditions must be true.
   equip crossbow
 ```
 
----
-
 ## `|` — Logical OR
 
 Either condition can be true. When `&` and `|` are mixed, all `&` conditions are evaluated first.
@@ -47,8 +41,6 @@ Either condition can be true. When `&` and `|` are mixed, all `&` conditions are
   activate potion
 ```
 
----
-
 ## `>` — Greater Than
 
 ```stonescript
@@ -56,16 +48,12 @@ Either condition can be true. When `&` and `|` are mixed, all `&` conditions are
   equip shiny bardiche
 ```
 
----
-
 ## `<` — Less Than
 
 ```stonescript
 ?hp < 6
   activate potion
 ```
-
----
 
 ## `>=` — Greater Than or Equal
 
@@ -78,8 +66,6 @@ The following two examples are equivalent:
 ?loc.stars > 6 | loc.stars = 6
   equipR vigor shield
 ```
-
----
 
 ## `<=` — Less Than or Equal
 

@@ -15,16 +15,12 @@ var a = 2 + 3
 The `+` operator can also join strings when used with string variables. See [Variables](/guide/variables) for examples.
 :::
 
----
-
 ## `-` — Subtraction
 
 ```stonescript
 ?hp < maxhp - 5
   equip vigor sword dL
 ```
-
----
 
 ## `*` — Multiplication
 
@@ -37,8 +33,6 @@ a = a * b
 var c = 2 * 0.4
 // c equals 0.8
 ```
-
----
 
 ## `/` — Division
 
@@ -54,8 +48,6 @@ b = b / 2
 // b equals 2.5
 ```
 
----
-
 ## `++` — Increment
 
 Increases a variable by 1.
@@ -66,8 +58,6 @@ a++
 // a equals 4
 ```
 
----
-
 ## `--` — Decrement
 
 Decreases a variable by 1.
@@ -77,8 +67,6 @@ var a = 3
 a--
 // a equals 2
 ```
-
----
 
 ## `%` — Modulo
 
@@ -95,8 +83,6 @@ var a = 5 % 4
   > (O/
 ```
 
----
-
 ## `( )` — Parentheses
 
 Parentheses control order of operations.
@@ -105,8 +91,6 @@ Parentheses control order of operations.
 var a = 2 * (3 - 1)
 // a equals 4
 ```
-
----
 
 ## `!` — Negation
 

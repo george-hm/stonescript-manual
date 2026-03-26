@@ -6,8 +6,6 @@ Values saved to permanent storage **persist between runs and game sessions**. Th
 Imported scripts access storage in isolation — different modules can use the same key names without overwriting each other's data.
 :::
 
----
-
 ## storage.Set
 
 ```
@@ -27,8 +25,6 @@ Saves a value to permanent storage at the specified key.
 var score = 1000
 storage.Set("highscore", score)
 ```
-
----
 
 ## storage.Get
 
@@ -61,8 +57,6 @@ var value = storage.Get("highscore", 0)
 >High Score = @value@
 ```
 
----
-
 ## storage.Has
 
 ```
@@ -85,8 +79,6 @@ Returns `true` if the specified key exists in storage.
   >No High Score found.
 ```
 
----
-
 ## storage.Delete
 
 ```
@@ -104,8 +96,6 @@ Deletes any value stored at the specified key.
 ```stonescript
 storage.Delete("highscore")
 ```
-
----
 
 ## storage.Incr
 
@@ -133,8 +123,6 @@ var amount
   amount = rng%5 + 5
   storage.Incr("coins", amount)
 ```
-
----
 
 ## storage.Keys
 

@@ -24,8 +24,6 @@ for i = 0 .. a.Count()-1
   >`0,@i@,@a[i]@
 ```
 
----
-
 ## string.Capitalize
 
 ```
@@ -46,8 +44,6 @@ a = string.Capitalize(a)
 >@a@
 // Prints "Foo"
 ```
-
----
 
 ## string.Equals
 
@@ -71,8 +67,6 @@ var a = "foo"
 :
   >They are NOT equal
 ```
-
----
 
 ## string.Format
 
@@ -99,8 +93,6 @@ var result = string.Format(
 >@result@
 ```
 
----
-
 ## string.IndexOf
 
 ```
@@ -126,8 +118,6 @@ var index = string.IndexOf(a, llo)
 var index2 = string.IndexOf(a, llo, 4)
 // index2 equals -1 (search started after "llo")
 ```
-
----
 
 ## string.Join
 
@@ -164,8 +154,6 @@ var d = string.Join(";", a, 0, 2)
 // "Hello;World"
 ```
 
----
-
 ## string.Size
 
 ```
@@ -186,8 +174,6 @@ var size = string.Size(a)
 >size = @size@
 // size = 12
 ```
-
----
 
 ## string.Split
 
@@ -215,8 +201,6 @@ var b = string.Split("Hello World !", " ", "l")
 var c = string.Split("Hello World !", "l", "r", true)
 // ["He", "o Wo", "d !"]
 ```
-
----
 
 ## string.Sub
 
@@ -247,8 +231,6 @@ var c = string.Sub(a, 6, 3)
 // "Wor"
 ```
 
----
-
 ## string.ToLower
 
 ```
@@ -269,8 +251,6 @@ a = string.ToLower(a)
 >@a@
 // "foo"
 ```
-
----
 
 ## string.ToUpper
 
